@@ -4,11 +4,9 @@ server:
 spring:
     jpa:
         database: MYSQL
-        hibernate:
-            ddl-auto: validate
 
     datasource:
-        url: jdbc:mysql://db:3307/demo
-        username: paymockuser
+        url: jdbc:mysql://dba:3306/paymockdb
+        username: root
         password: root
         driver-class-name: com.mysql.jdbc.Driver

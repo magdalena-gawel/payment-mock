@@ -3,7 +3,7 @@ USE `paymockdb`;
 
 DROP TABLE IF EXISTS `mocked_response`;
 CREATE TABLE `mocked_response` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(256) DEFAULT NULL,
   `content` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
