@@ -12,8 +12,12 @@ services:
     networks:
       - platform
       - default
-  dba:
-    image: mysql:5.6
+    links:
+      - db-paymock
+    restart: always
+
+  db-paymock:
+    image: mysql:5.7.19
     ports:
       - 3307:3306
     volumes:

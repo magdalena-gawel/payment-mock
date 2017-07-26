@@ -1,12 +1,13 @@
 server:
-    port: 80
+    port: 8092
 
 spring:
     jpa:
         database: MYSQL
 
     datasource:
-        url: jdbc:mysql://dba:3306/paymockdb
+#        url: jdbc:mysql://db-paymock/paymockdb
+        url: jdbc:mysql://127.0.0.1:3307/paymockdb
         username: root
         password: root
         driver-class-name: com.mysql.jdbc.Driver

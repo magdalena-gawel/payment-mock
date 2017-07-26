@@ -1,9 +1,6 @@
 package no.spid.payment.mock.paymentmock;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class MockedResponse {
@@ -13,6 +10,8 @@ public class MockedResponse {
 
     private String key;
 
+    @Column
+    @Convert(converter = ContentConverter.class)
     private String content;
 
     public Integer getId() {
