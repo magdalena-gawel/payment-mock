@@ -1,8 +1,8 @@
-package no.spid.payment.mock.paymentmock;
+package no.spid.payment.mock.paymentmock.mockedresponse;
 
 import javax.persistence.*;
 
-@Entity // This tells Hibernate to make a table out of this class
+@Entity
 public class MockedResponse {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -11,7 +11,7 @@ public class MockedResponse {
     private String key;
 
     @Column
-    @Convert(converter = ContentConverter.class)
+//    @Convert(converter = ResponseContentConverter.class)
     private String content;
 
     public Integer getId() {
